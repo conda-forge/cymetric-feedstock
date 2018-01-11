@@ -21,7 +21,7 @@ requirements:
   run:
     - python
     - cyclus >=1.5.*
-    - pyne
+    #- pyne  # this is working locally, but not on conda-forge for some weird reason
     - numpy
     - pandas
     - pytables
