@@ -1,7 +1,5 @@
-{% set version = "1.5.0" %}
-{% set org = "cyclus" %}
-{% set branch = "1.5.0" %}
-{% set sha256 = "b1c60e68d9ee4421fbdeebf768a1ac48a31fc5a3559583b3f79e3c9b0aa4bb50" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "b07d17fea577f5719d4346dde3182fd86778786d062ee135d122d8f75ac7b3ff" %}
 
 package:
   name: cymetric
@@ -9,12 +7,12 @@ package:
 
 source:
   fn: cymetric-{{ version }}-{{ sha256 }}.tar.gz
-  url: https://github.com/{{ org }}/cymetric/archive/{{ branch }}.tar.gz
+  url: https://github.com/cyclus/cymetric/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [win or py34]
+  noarch: python
   script: python setup.py install --prefix ${PREFIX}
 
 requirements:
@@ -23,20 +21,15 @@ requirements:
   run:
     - python
     - cyclus >=1.5.*
+    #- pyne  # this is working locally, but not on conda-forge for some weird reason
+    - numpy
     - pandas
+    - pytables
+    - python-graphviz
 
 test:
-  requires:
-    - cycamore >=1.5.*
-  #  - nose
-  # Remove the following when conda-forge migrates to conda-build v2.*
   imports:
     - cymetric
-  # Use the following when conda-forge migrates to conda-build v2.*
-  #commands:
-  #  - cd "${SRC_DIR}/tests"
-  #  - nosetests test_cyclus.py test_evaluator.py test_fco_metrics.py test_root_metrics.py  # [py27]
-  #  - nosetests  # [py35]
 
 about:
   home: http://fuelcycle.org
