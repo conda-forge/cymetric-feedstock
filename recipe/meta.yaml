@@ -1,7 +1,7 @@
-{% set version = "1.5.0" %}
+{% set version = "1.5.3" %}
 {% set org = "cyclus" %}
 {% set branch = "1.5.0" %}
-{% set sha256 = "b1c60e68d9ee4421fbdeebf768a1ac48a31fc5a3559583b3f79e3c9b0aa4bb50" %}
+{% set sha256 = "b07d17fea577f5719d4346dde3182fd86778786d062ee135d122d8f75ac7b3ff" %}
 
 package:
   name: cymetric
