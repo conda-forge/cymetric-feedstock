@@ -1,5 +1,5 @@
-{% set version = "1.5.3" %}
-{% set sha256 = "40ba76b01c7a50b39fd2ac043990cce54e339c2ef3e14da18bbd64e5bc733fc6" %}
+{% set version = "1.5.4" %}
+{% set sha256 = "0287666dab778e3a9182591d17afa6ba8098d315c038a3d9918877ea548e1072" %}
 
 package:
   name: cymetric
@@ -11,16 +11,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  noarch: python
-  script: python setup.py install --prefix ${PREFIX}
+  number: 0
+  skip: True  # [win or py<=27 or py>=37]
+  detect_binary_files_with_prefix: true
 
 requirements:
   build:
     - python
   run:
     - python
-    - cyclus >=1.5.*
+    - cyclus {{ version }}
     #- pyne  # this is working locally, but not on conda-forge for some weird reason
     - numpy
     - pandas
@@ -30,6 +30,7 @@ requirements:
 test:
   imports:
     - cymetric
+    - cycamore {{ version }t}
 
 about:
   home: http://fuelcycle.org
