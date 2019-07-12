@@ -30,7 +30,6 @@ requirements:
 test:
   imports:
     - cymetric
-    - cycamore {{ version }t}
 
 about:
   home: http://fuelcycle.org
