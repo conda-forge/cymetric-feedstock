@@ -1,5 +1,5 @@
-{% set version = "1.5.3" %}
-{% set sha256 = "40ba76b01c7a50b39fd2ac043990cce54e339c2ef3e14da18bbd64e5bc733fc6" %}
+{% set version = "1.5.5" %}
+{% set sha256 = "2f2c9fa0ab53d6c00419949f92824188a2f0f67e169a3d09eb1b317c4f9cd88a" %}
 
 package:
   name: cymetric
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python setup.py install --prefix ${PREFIX}
 
@@ -34,6 +34,7 @@ test:
 about:
   home: http://fuelcycle.org
   license: BSD 3-clause
+  license_file: LICENSE.rst
   license_family: BSD
   summary: 'Cyclus Metrics'
   doc_url: http://fuelcycle.org/user/cymetric/index.html
