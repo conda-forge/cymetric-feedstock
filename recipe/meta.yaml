@@ -16,7 +16,7 @@ build:
   script: python setup.py install --prefix ${PREFIX}
 
 requirements:
-  build:
+  host:
     - python
   run:
     - python
