@@ -12,6 +12,7 @@ source:
 
 build:
   number: 0
+  skip: True # [win or osx or py<=27]
   noarch: python
   script: python setup.py install --prefix ${PREFIX}
 
