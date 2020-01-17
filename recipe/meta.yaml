@@ -29,8 +29,12 @@ requirements:
     - python-graphviz
 
 test:
+  requires:
+    - nose
   imports:
     - cymetric
+  source_files:
+    - tests
 
 about:
   home: http://fuelcycle.org
