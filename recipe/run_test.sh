@@ -3,10 +3,10 @@
 cd tests
 
 # run integration tests
-nostests test_cyclus.py
-nostests test_evaluator.py
-nostests test_fco_metrics.py
-nostests test_filters.py
-nostests test_metrics.py
-nostests test_root_metrics.py
-nostests test_timeseries.py
+nosetests test_cyclus.py
+nosetests test_evaluator.py
+nosetests test_fco_metrics.py
+nosetests test_filters.py
+nosetests test_metrics.py
+nosetests test_root_metrics.py
+nosetests test_timeseries.py
