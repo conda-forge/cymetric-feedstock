@@ -13,15 +13,15 @@ source:
 build:
   number: 0
   skip: True # [win or osx or py<=27]
-  noarch: python
-  script: python setup.py install --prefix ${PREFIX}
 
 requirements:
+  build:
+    - setuptools
   host:
     - python
   run:
     - python
-    - cyclus >=1.5.*
+    - cyclus {{ version }}
     #- pyne  # this is working locally, but not on conda-forge for some weird reason
     - numpy
     - pandas
