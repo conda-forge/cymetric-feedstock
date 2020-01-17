@@ -27,6 +27,7 @@ requirements:
     - pandas
     - pytables
     - python-graphviz
+    - hdf5
 
 test:
   requires:
