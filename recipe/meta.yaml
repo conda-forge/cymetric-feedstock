@@ -15,8 +15,6 @@ build:
   skip: True  # [win or osx or py<=27]
 
 requirements:
-  build:
-    - setuptools
   host:
     - python
   run:
