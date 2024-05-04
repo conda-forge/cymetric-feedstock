@@ -1,5 +1,5 @@
-{% set version = "1.5.5" %}
-{% set sha256 = "2f2c9fa0ab53d6c00419949f92824188a2f0f67e169a3d09eb1b317c4f9cd88a" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "c5c7ae5b8ac928a23680397db0de54c8aebc2c69add20b37c20407af4be5c199" %}
 
 package:
   name: cymetric
@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or osx or py<=27]
+  skip: true  # [win or osx or py<=27]
 
 requirements:
   host:
