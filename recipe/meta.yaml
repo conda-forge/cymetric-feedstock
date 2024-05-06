@@ -1,14 +1,12 @@
-{% set version = "1.5.5" %}
-{% set sha256 = "2f2c9fa0ab53d6c00419949f92824188a2f0f67e169a3d09eb1b317c4f9cd88a" %}
+{% set version = "1.6.0" %}
 
 package:
   name: cymetric
   version: {{ version }}
 
 source:
-  fn: cymetric-{{ version }}-{{ sha256 }}.tar.gz
-  url: https://github.com/cyclus/cymetric/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/cyclus/cymetric.git
+  git_rev: 1.6.0
 
 build:
   number: 0
@@ -23,11 +21,10 @@ requirements:
     - numpy
     - pandas
     - pytables
-    - python-graphviz
 
 test:
   requires:
-    - nose
+    - pytest
     - cycamore {{ version }}
   imports:
     - cymetric
@@ -36,7 +33,7 @@ test:
 
 about:
   home: http://fuelcycle.org
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: LICENSE.rst
   license_family: BSD
   summary: 'Cyclus Metrics'
@@ -51,3 +48,4 @@ extra:
     - katyhuff
     - FlanFlanagan
     - stompsjo
+    - bennibbelink
