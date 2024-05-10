@@ -43,9 +43,9 @@ about:
 
 extra:
   recipe-maintainers:
-    - scopatz
     - gonuke
     - katyhuff
     - FlanFlanagan
-    - stompsjo
     - bennibbelink
+    - munkm
+    - abachma2
