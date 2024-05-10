@@ -195,9 +195,9 @@ Feedstock Maintainers
 =====================
 
 * [@FlanFlanagan](https://github.com/FlanFlanagan/)
+* [@abachma2](https://github.com/abachma2/)
 * [@bennibbelink](https://github.com/bennibbelink/)
 * [@gonuke](https://github.com/gonuke/)
 * [@katyhuff](https://github.com/katyhuff/)
-* [@scopatz](https://github.com/scopatz/)
-* [@stompsjo](https://github.com/stompsjo/)
+* [@munkm](https://github.com/munkm/)
 
