@@ -52,13 +52,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4909&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cymetric-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_python3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4909&branchName=main">
@@ -83,14 +76,14 @@ Current release info
 Installing cymetric
 ===================
 
-Installing `cymetric` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `cymetric` from the `conda-forge/label/cymetric_dev` channel can be achieved by adding `conda-forge/label/cymetric_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/cymetric_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cymetric` can be installed with `conda`:
+Once the `conda-forge/label/cymetric_dev` channel has been enabled, `cymetric` can be installed with `conda`:
 
 ```
 conda install cymetric
@@ -105,26 +98,26 @@ mamba install cymetric
 It is possible to list all of the versions of `cymetric` available on your platform with `conda`:
 
 ```
-conda search cymetric --channel conda-forge
+conda search cymetric --channel conda-forge/label/cymetric_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search cymetric --channel conda-forge
+mamba search cymetric --channel conda-forge/label/cymetric_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search cymetric --channel conda-forge
+mamba repoquery search cymetric --channel conda-forge/label/cymetric_dev
 
 # List packages depending on `cymetric`:
-mamba repoquery whoneeds cymetric --channel conda-forge
+mamba repoquery whoneeds cymetric --channel conda-forge/label/cymetric_dev
 
 # List dependencies of `cymetric`:
-mamba repoquery depends cymetric --channel conda-forge
+mamba repoquery depends cymetric --channel conda-forge/label/cymetric_dev
 ```
 
 

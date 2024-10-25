@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "dev" %}
 
 package:
   name: cymetric
@@ -6,11 +6,11 @@ package:
 
 source:
   git_url: https://github.com/cyclus/cymetric.git
-  git_rev: 1.6.0
+  git_rev: main
 
 build:
-  number: 1
-  skip: True  # [win or osx or py<=27]
+  number: 0
+  skip: True  # [win or osx]
 
 requirements:
   host:
