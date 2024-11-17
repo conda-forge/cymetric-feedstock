@@ -9,13 +9,14 @@ source:
   git_rev: main
 
 build:
-  number: 0
-  skip: true  # [win or osx]
+  number: 1
+  skip: true  # [win]
 
 requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - cyclus {{ version }}
