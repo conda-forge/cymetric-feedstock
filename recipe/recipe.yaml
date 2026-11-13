@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  version: "1.6.0"
+
+package:
+  name: cymetric
+  version: ${{ version }}
+
+source:
+  url: https://github.com/cyclus/cymetric/archive/${{ version }}.tar.gz
+  sha256: c5c7ae5b8ac928a23680397db0de54c8aebc2c69add20b37c20407af4be5c199
+
+build:
+  noarch: python
+  number: 4
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - cyclus ${{ version }}.*
+    - jinja2
+    - numpy
+    - matplotlib-base
+    - pandas
+    - pytables
+    - __unix
+
+tests:
+  - python:
+      imports:
+        - cymetric
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+      pip_check: true
+
+  - files:
+      source:
+        - tests
+    requirements:
+      run:
+        - pytest
+        # tests/test-input.xml uses cycamore agents to generate the test databases
+        - cycamore ${{ version }}.*
+    script:
+      # tests/tools.py runs cyclus on test-input.xml relative to the cwd
+      - cd tests
+      - pytest -vv
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE.rst
+  summary: Cyclus Metrics
+  homepage: http://fuelcycle.org
+  repository: https://github.com/cyclus/cymetric
+  documentation: http://fuelcycle.org/user/cymetric/index.html
+
+extra:
+  recipe-maintainers:
+    - matthewfeickert
+    - gonuke
+    - katyhuff
+    - FlanFlanagan
+    - bennibbelink
+    - munkm
+    - abachma2
